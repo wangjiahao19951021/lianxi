@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            /* 暗黑模式 */
+            /* filter: invert(1) hue-rotate(180deg); */
+            background: rgba(204, 169, 44, 0);
+        }
+
+        .pulse {
+            margin: 100px;
+            display: block;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #2ccc5dab;
+            cursor: pointer;
+            box-shadow: 0 0 0 rgba(23, 214, 55, 0.88);
+            animation: pulse 2s infinite;
+            margin: 100px auto;
+        }
+
+        .pulse:hover {
+            animation: none;
+
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(23, 214, 55, 0.88);
+            }
+
+            70% {
+                box-shadow: 0 0 0 30px rgba(204, 169, 44, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+            }
+        }
+
+        .cloud {
+            width: 50px;
+            height: 50px;
+            margin: 100px auto;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow:
+                65px -15px 0 -5px #fff,
+                25px -25px #fff,
+                30px 10px #fff,
+                60px 15px 0 -10px #fff,
+                85px 5px 0 -5px #fff,
+                35px -35px #c8c8c8,
+                66px -27px 0 -5px #c8c8c8,
+                91px -10px 0 -8px #c8c8c8;
+        }
+
+        .box{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="pulse"></span>
+    <div class="cloud"></div>
+    <section class="box">
+        <button class="change">改变</button>
+        <button class="choujiang">for循环暂停</button>
+        <button class="yibu">模拟ajax同步执行完执行下一个</button>
+        <button class="yincang">123456789</button>
+        <button class="jicheng">继承</button>
+        <button class="zhuanhuan">转换</button>
+    </section>
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>

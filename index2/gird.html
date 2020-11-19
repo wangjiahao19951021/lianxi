@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            /* rem布局 这样相当于1rem=100px 基于750图 */
+            font-size: calc(100vw / 7.5);
+        }
+        .item-1 {
+            background-color: #ef342a;
+        }
+
+        .item-2 {
+            background-color: #f68f26;
+        }
+
+        .item-3 {
+            background-color: #4ba946;
+        }
+
+        .item-4 {
+            background-color: #0376c2;
+        }
+
+        .item-5 {
+            background-color: #c077af;
+        }
+
+        .item-6 {
+            background-color: #f8d29d;
+        }
+
+        .item-7 {
+            background-color: #b5a87f;
+        }
+
+        .item-8 {
+            background-color: #d0e4a9;
+        }
+
+        .item-9 {
+            background-color: #13e2e2;
+        }
+
+        .item {
+            font-size: 0.3rem;
+            border: 1px solid #e5e4e9;
+            transition: all .3s;
+
+        }
+
+        .item:hover {
+            transform: translate(-10px, -10px);
+            box-shadow: 3px 3px 3px 3px rgb(116, 114, 114);
+        }
+
+        .box {
+            margin: 10px;
+        }
+
+        /* #container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 33.3333%);
+        } */
+        /* #container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        } */
+        /* #container {
+            display: grid;
+            grid-template-columns: 100px auto 100px;
+            间距
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+        } */
+        #container {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 50px 80px 50px;
+        }
+
+        #container .item {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #container1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #container2 {
+            display: grid;
+            grid-template-columns: 50px auto 50px;
+            grid-template-rows: 100px;
+        }
+
+        #container2 .item {
+            justify-content: end;
+            align-items: end;
+        }
+
+        #container3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 100px 100px;
+        }
+
+        #container3 .item-1 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        #container3 .item-4 {
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        .main_box {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .sesstion_main1 {
+            background-color: white;
+        }
+
+        .sesstion_main2 {
+            background-color: skyblue;
+        }
+
+        .sesstion_main3 {
+            background-color: #0376c2;
+        }
+
+        .sesstion_main4 {
+            background-color: #b5a87f;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="box">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+        <div class="item item-6">6</div>
+        <div class="item item-7">7</div>
+        <div class="item item-8">8</div>
+        <div class="item item-9">9</div>
+    </div>
+    <div id="container1" class="box">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+    </div>
+    <div id="container2" class="box">
+        <div class="item item-2"></div>
+        <div class="item item-1">1</div>
+        <div class="item item-3"></div>
+    </div>
+    <div id="container3" class="box">
+        <div class="item item-1">
+            <div class="main_box">
+                <div class="sesstion_main sesstion_main1">1</div>
+                <div class="sesstion_main sesstion_main2">2</div>
+                <div class="sesstion_main sesstion_main3">3</div>
+                <div class="sesstion_main sesstion_main4">4</div>
+            </div>
+        </div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4" contenteditable>4</div>
+        <div class="item item-5">5</div>
+        <div class="item item-6">6</div>
+    </div>
+</body>
+<script>
+    (_=>[..."`1234567890-=~~QWERTYUIOP[]\\~ASDFGHJKL;'~~ZXCVBNM,./~"].map(x=>(o+=`/${b='_'.repeat(w=x<y?2:' 667699'[x=["Bs","Tab","Caps","Enter"][p++]||'Shift',p])}\\|`,m+=y+(x+'    ').slice(0,w)+y+y,n+=y+b+y+y,l+=' __'+b)[73]&&(k.push(l,m,n,o),l='',m=n=o=y),m=n=o=y='|',p=l=k=[])&&k.join`
+`)()
+
+    class a {
+        constructor (canshu) {
+            this.canshu = canshu
+            this.init()
+        }
+        init () {
+            this.system ()
+        }
+        system () {
+            console.log(this.canshu)
+        }
+    }
+    new a ('哈哈')
+</script>
+
+</html>

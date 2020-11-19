@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        (function () {
+            var str = '2019-9-23';
+            str = str.replace(/-/g, '/');
+            console.log(str);
+        }());
+        (function () {
+            var reg = /\d{2}/;//至少出现连续的两个数字
+            console.log(reg.test('9')); // false
+            console.log(reg.test('99')); // true
+            console.log(reg.test('jknk0bhj')); // false
+            console.log(reg.test('jknk0865bhj')); // true
+            console.log(reg.test('dsafha13278423sdfsf')) //true
+        }());
+        (function () {
+            var reg = /\d+/;
+            var str = 'hello2019hello2020';
+            console.log(reg.exec(str));
+        }());
+    </script>
+</body>
+
+</html>
